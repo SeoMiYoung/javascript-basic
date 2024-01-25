@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
     <title>Javascript Basic</title>
 </head>
 <body>
-    <h1 id="hello">안녕하세요</h1>
+    <!-- 버튼을 누르면 알림창을 띄우고 싶음 -->
+    <div id="alert-box-id" class="alert-box">알림창임</div>
+    <button onClick="buttonClickHandler()">버튼</button>
+
     <script>
-        // 로드 될때마다 실행됨
-        // html문서의 id가 hello인 요소를 찾아와라
-        document.getElementById('hello').style.fontSize = '16px'; 
+        const buttonClickHandler = () => {
+            document.getElementById('alert-box-id').style.display = 'block';
+        };
     </script>
 </body>
 </html>
