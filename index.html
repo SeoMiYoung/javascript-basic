@@ -9,7 +9,7 @@
 <body>
     <!-- 버튼을 누르면 알림창을 띄우고 싶음 -->
     <div id="alert-box-id" class="alert-box">
-        <p id="alert-box-text">알림창임</p>
+        <p class="title1">알림창임</p>
         <button onClick="closeAlertBox()">닫기</button>
     </div>
     <button onClick="AlertBox('아이디 보여주셈')">버튼1</button>
@@ -19,7 +19,7 @@
     <script> 
         function AlertBox(text) { 
             document.getElementById('alert-box-id').style.display='block';
-            document.getElementById('alert-box-text').innerHTML = text;
+            document.getElementsByClassName('title1').innerHTML = text;
         }
         function closeAlertBox() {
             document.getElementById('alert-box-id').style.display='none';
