@@ -1,8 +1,6 @@
-.alert-box {
-    background-color: skyblue;
-    padding: 20px;
-    color: white;
-    border-radius: 5px;
-    /* 안보이게 하고 싶음 */
-    display: none; 
+.list-group {
+    display: none;
+}
+.show {
+    display: block;
 }
