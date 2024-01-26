@@ -9,16 +9,24 @@
 <body>
     <!-- 버튼을 누르면 알림창을 띄우고 싶음 -->
     <div id="alert-box-id" class="alert-box">
-        알림창임
-        <button onClick="AlertBox('none')">닫기</button>
+        <p id="alert-box-text">알림창임</p>
+        <button onClick="AlertBox('none', null)">닫기</button>
     </div>
-    <button onClick="AlertBox('block')">버튼</button>
+    <button onClick="AlertBox('block', 1)">버튼1</button>
+    <button onClick="AlertBox('block', 2)">버튼2</button>
 
+    
     <script> 
-        // 코드를 짧게 축약해서 쓰고싶을 때, function 꺼내서 씁니다.
-        // function --> 코드를 재사용하기 편리
-        function AlertBox(구멍) {
-            document.getElementById('alert-box-id').style.display=구멍;
+        // 1. 알림창 여러개 만들기
+        // 2. 알림창 하나 --> <p>태그 안의 글자 변경
+        function AlertBox(showState, btnNum) { // '구멍'이 아니라 파라미터
+            document.getElementById('alert-box-id').style.display=showState;
+            if(showState == 'block') {
+                if(btnNum == 1)
+                    document.getElementById('alert-box-text').innerHTML = '아이디 입력';
+                if(btnNum == 2)
+                    document.getElementById('alert-box-text').innerHTML = '비번 입력';
+            }
         }
     </script>
 </body>
