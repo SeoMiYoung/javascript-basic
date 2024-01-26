@@ -10,23 +10,19 @@
     <!-- 버튼을 누르면 알림창을 띄우고 싶음 -->
     <div id="alert-box-id" class="alert-box">
         <p id="alert-box-text">알림창임</p>
-        <button onClick="AlertBox('none', null)">닫기</button>
+        <button onClick="closeAlertBox()">닫기</button>
     </div>
-    <button onClick="AlertBox('block', 1)">버튼1</button>
-    <button onClick="AlertBox('block', 2)">버튼2</button>
+    <button onClick="AlertBox('아이디 보여주셈')">버튼1</button>
+    <button onClick="AlertBox('비번 보여주셈')">버튼2</button>
 
     
     <script> 
-        // 1. 알림창 여러개 만들기
-        // 2. 알림창 하나 --> <p>태그 안의 글자 변경
-        function AlertBox(showState, btnNum) { // '구멍'이 아니라 파라미터
-            document.getElementById('alert-box-id').style.display=showState;
-            if(showState == 'block') {
-                if(btnNum == 1)
-                    document.getElementById('alert-box-text').innerHTML = '아이디 입력';
-                if(btnNum == 2)
-                    document.getElementById('alert-box-text').innerHTML = '비번 입력';
-            }
+        function AlertBox(text) { 
+            document.getElementById('alert-box-id').style.display='block';
+            document.getElementById('alert-box-text').innerHTML = text;
+        }
+        function closeAlertBox() {
+            document.getElementById('alert-box-id').style.display='none';
         }
     </script>
 </body>
