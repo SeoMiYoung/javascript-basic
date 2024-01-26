@@ -10,7 +10,7 @@
     <!-- 버튼을 누르면 알림창을 띄우고 싶음 -->
     <div id="alert-box-id" class="alert-box">
         <p class="title1">알림창임</p>
-        <button onClick="closeAlertBox()">닫기</button>
+        <button class="title1" onClick="closeAlertBox()">닫기</button>
     </div>
     <button onClick="AlertBox('아이디 보여주셈')">버튼1</button>
     <button onClick="AlertBox('비번 보여주셈')">버튼2</button>
@@ -19,7 +19,9 @@
     <script> 
         function AlertBox(text) { 
             document.getElementById('alert-box-id').style.display='block';
-            document.getElementsByClassName('title1').innerHTML = text;
+            // 클래스명으로 찾을때는 반드시 indexing이 필요! 
+            // 그 class명을 가진 요소가 많을 수 있기 때문!
+            document.getElementsByClassName('title1')[0].innerHTML = text;
         }
         function closeAlertBox() {
             document.getElementById('alert-box-id').style.display='none';
