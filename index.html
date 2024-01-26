@@ -27,10 +27,11 @@
       </ul> 
     
     <script>
-        // getElementsByClassName은 요소의 컬렉션을 반환하므로 직접적으로 addEventListener을 사용 못함
-        // 따라서 querySelector를 사용하거나, 인덱싱으로 특정 요소를 정확히 지정해줘야 addEventListener 사용 가능
-        var navBtn = document.getElementsByClassName('navbar-toggler')[0];
-        var navList = document.getElementsByClassName('list-group')[0];
+
+        // querySelector는 css문법 그대로 쓸 수 있는 셀렉터임
+        // 특징: 맨 위의 요소만 찾아줌 --> querySelectorAll쓰고 인덱싱으로 몇번째 요소 명시!
+        var navBtn = document.querySelectorAll('.navbar-toggler')[0];
+        var navList = document.querySelectorAll('.list-group')[0];
 
         navBtn.addEventListener('click', function() {
             navList.classList.toggle('show');
