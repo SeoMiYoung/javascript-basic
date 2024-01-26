@@ -10,18 +10,15 @@
     <!-- 버튼을 누르면 알림창을 띄우고 싶음 -->
     <div id="alert-box-id" class="alert-box">
         알림창임
-        <button onClick="closeAlertBox()">닫기</button>
+        <button onClick="AlertBox('none')">닫기</button>
     </div>
-    <button onClick="showAlertBox()">버튼</button>
+    <button onClick="AlertBox('block')">버튼</button>
 
     <script> 
         // 코드를 짧게 축약해서 쓰고싶을 때, function 꺼내서 씁니다.
         // function --> 코드를 재사용하기 편리
-        function showAlertBox() {
-            document.getElementById('alert-box-id').style.display='block';
-        }
-        function closeAlertBox() {
-            document.getElementById('alert-box-id').style.display='none';
+        function AlertBox(구멍) {
+            document.getElementById('alert-box-id').style.display=구멍;
         }
     </script>
 </body>
