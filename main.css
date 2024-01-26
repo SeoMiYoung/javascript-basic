@@ -11,10 +11,8 @@
     background : rgba(0,0,0,0.5);
     z-index : 5;
     padding: 30px;
-    /* display: none은 아예 없어버리지만, visibilitiy: hidden은 모습만 없애서, 애니메이션에 적합 */
     visibility: hidden;
     opacity: 0;
-    /* transition은 모든 css속성이 변할 때, 1초에 걸쳐서 변화를 주겠다라는 의미 */
     transition: all 1s;
   }
   .show-modal {
@@ -26,3 +24,7 @@
     border-radius: 5px;
     padding: 30px;
   } 
+  .main-bg {
+    padding: 100px 20px;
+    background: lightgrey;
+}
