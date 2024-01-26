@@ -26,14 +26,16 @@
         <li class="list-group-item">And a fifth one</li>
       </ul> 
     
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script>
 
-        // querySelector는 css문법 그대로 쓸 수 있는 셀렉터임
-        // 특징: 맨 위의 요소만 찾아줌 --> querySelectorAll쓰고 인덱싱으로 몇번째 요소 명시!
-        var navBtn = document.querySelectorAll('.navbar-toggler')[0];
+        // HTML 조작문법을 쉽게 바꿔주는 라이브러리들 jQuery, React, Vue
+        // 단, React랑 Vue는 js에 대한 숙련도를 요구함 
+        // jQuery는 언어가 아니라 라이브러리일 뿐! 그냥 코드를 쫌 짧게 만듬!
+        var navBtn = $('.navbar-toggler');
         var navList = document.querySelectorAll('.list-group')[0];
 
-        navBtn.addEventListener('click', function() {
+        navBtn.on('click', function() {
             navList.classList.toggle('show');
         });
     </script>
