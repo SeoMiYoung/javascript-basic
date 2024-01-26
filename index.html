@@ -8,6 +8,15 @@
     <link href="main.css" rel="stylesheet">
 </head>
   <body>
+    <!-- 모달창 -->
+    <div class="black-bg">
+        <div class="white-bg">
+          <h4>로그인하세요</h4>
+          <button class="btn btn-danger" id="close">닫기</button>
+        </div>
+    </div> 
+
+    <!-- 네비게이션 바 겉표면 -->
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
           <span class="navbar-brand">Navbar</span>
@@ -17,25 +26,37 @@
         </div>
       </nav> 
 
-      <!-- 클래스 탈부착 -->
-      <ul class="list-group">
+      <!-- 네비게이션 바 내용 -->
+    <ul class="list-group">
         <li class="list-group-item">An item</li>
         <li class="list-group-item">A second item</li>
         <li class="list-group-item">A third item</li>
         <li class="list-group-item">A fourth item</li>
         <li class="list-group-item">And a fifth one</li>
-      </ul> 
+    </ul> 
     
+    <button id="login">로그인</button>
+
+    <!-- 제이쿼리 스크립트 -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        var loginBtn = $('#login');
+        var modal = $('.black-bg');
+
+        // 제이쿼리를 사용하여, 로그인 버튼을 누르면 모달창이 뜨게 하기
+        loginBtn.on('click', function() {
+            modal.fadeIn(); // 모달창이 서서히 뜨게 하기
+        });
+    </script>
     <script>
 
         // HTML 조작문법을 쉽게 바꿔주는 라이브러리들 jQuery, React, Vue
         // 단, React랑 Vue는 js에 대한 숙련도를 요구함 
         // jQuery는 언어가 아니라 라이브러리일 뿐! 그냥 코드를 쫌 짧게 만듬!
-        var navBtn = $('.navbar-toggler');
-        var navList = document.querySelectorAll('.list-group')[0];
+        var modalBtn = $('.navbar-toggler');
+        var navList = $('.list-group');
 
-        navBtn.on('click', function() {
+        modalBtn.on('click', function() {
             navList.classList.toggle('show');
         });
     </script>
