@@ -13,12 +13,12 @@
         <div class="white-bg">
             <form action="success.html"> 
                 <div class="my-3">
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control" id="email">
                  </div>
                  <div class="my-3">
-                   <input type="password" class="form-control">
+                   <input type="password" class="form-control" id="pw">
                  </div>
-                 <button type="submit" class="btn btn-primary">전송</button>
+                 <button type="submit" class="btn btn-primary" id="send">전송</button>
                  <button type="button" class="btn btn-danger" id="close">닫기</button>
               </form> 
         </div>
@@ -49,16 +49,18 @@
     </div>
 
     <script>
-        const sendBtn = document.getElementsByClassName('btn-primary')[0];
-        const inputText = document.getElementsByClassName('form-control')[0];
-        const inputPassword = document.getElementsByClassName('form-control')[1];
+        const loginForm = document.querySelector('form');
+        const inputText = document.getElementById('email');
+        const inputPassword = document.getElementById('pw');
 
-        sendBtn.addEventListener('click', function() {
+        loginForm.addEventListener('submit', function(e) {
             if(inputText.value.trim() === '') {
-                alert('text가 비었습니다!');
+                alert('email이 비었습니다!');
+                e.preventDefault();
             }
             if(inputPassword.value.trim() === '') {
                 alert('password가 비었습니다!');
+                e.preventDefault();
             }
         });
     </script>
