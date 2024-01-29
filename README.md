@@ -1,4 +1,5 @@
 # javascript-basic
+자바스크립트 입문 공부
 
 ### ✅ Commit
 <table>
