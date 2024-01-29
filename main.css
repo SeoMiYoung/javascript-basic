@@ -28,3 +28,9 @@
     padding: 100px 20px;
     background: lightgrey;
 }
+
+/* 다크 모드 */
+.dark {
+    background-color: black;
+    color: white;
+}
