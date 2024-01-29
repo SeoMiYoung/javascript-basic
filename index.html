@@ -53,6 +53,9 @@
         const inputText = document.getElementById('email');
         const inputPassword = document.getElementById('pw');
 
+        // input이벤트는 input에 입력한 값이 바뀔때 발생
+        // change 이벤트는 input에 입력한 값이 바뀌고 포커스를 잃을 때 발생
+        
         loginForm.addEventListener('submit', function(e) {
             if((inputText.value.trim() === '')||(inputPassword.value.trim() === '')) {
                 alert('내용을 채워주세요!');
