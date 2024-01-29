@@ -54,13 +54,16 @@
         const inputPassword = document.getElementById('pw');
 
         loginForm.addEventListener('submit', function(e) {
-            if(inputText.value.trim() === '') {
-                alert('email이 비었습니다!');
+            if((inputText.value.trim() === '')||(inputPassword.value.trim() === '')) {
+                alert('내용을 채워주세요!');
                 e.preventDefault();
             }
-            if(inputPassword.value.trim() === '') {
-                alert('password가 비었습니다!');
+            else if (inputPassword.value.length < 6) {
+                alert('비밀번호를 더 길게 입력해주세요.');
                 e.preventDefault();
+            }
+            else {
+                ;
             }
         });
     </script>
