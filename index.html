@@ -50,11 +50,18 @@
     </div>
 
     <script>
-        // dark, light 글씨 토글
+        // 변수
+        let count = 0; // badge 클릭 횟수 
+
+        // 버튼 누르면 글자가 Dark/Light 번갈아가며 바뀌게 해보자
         const darkBtn = document.getElementById('darkBtn');
 
+        // badge 클릭횟수가 홀수면 내부 글자를 Light로 변경
+        // badge 클릭횟수가 짝수면 내부 글자를 Dark로 변경
         darkBtn.addEventListener('click', function() {
-            if (darkBtn.textContent.trim() == 'Dark 🔄') {
+            count++;
+
+            if (count%2 != 0) { // 홀수
                 // 'Dark'일 때의 처리
                 darkBtn.textContent = 'Light 🔄';
             } else {
