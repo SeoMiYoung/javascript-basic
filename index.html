@@ -28,6 +28,7 @@
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
           <span class="navbar-brand">Navbar</span>
+          <span id='darkBtn' class="badge bg-dark ms-auto mx-3">Dark 🔄</span>
           <button class="navbar-toggler" type="button">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -49,13 +50,27 @@
     </div>
 
     <script>
+        // dark, light 글씨 토글
+        const darkBtn = document.getElementById('darkBtn');
+
+        darkBtn.addEventListener('click', function() {
+            if (darkBtn.textContent.trim() == 'Dark 🔄') {
+                // 'Dark'일 때의 처리
+                darkBtn.textContent = 'Light 🔄';
+            } else {
+                // 'Dark'가 아닐 때의 처리
+                darkBtn.textContent = 'Dark 🔄';
+            }
+        });
+    </script>
+    <script>
         const loginForm = document.querySelector('form');
         const inputText = document.getElementById('email');
         const inputPassword = document.getElementById('pw');
 
         // input이벤트는 input에 입력한 값이 바뀔때 발생
         // change 이벤트는 input에 입력한 값이 바뀌고 포커스를 잃을 때 발생
-        
+
         loginForm.addEventListener('submit', function(e) {
             if((inputText.value.trim() === '')||(inputPassword.value.trim() === '')) {
                 alert('내용을 채워주세요!');
