@@ -118,6 +118,10 @@
                 alert('비밀번호를 더 길게 입력해주세요.');
                 e.preventDefault();
             }
+            else if (/[A-Z]/.test(inputPassword.value) == false) { // 비번에 영어 대문자가 있는지 검사
+                alert('비밀번호에 대문자를 하나 꼭 포함해주세요.');
+                e.preventDefault();
+            }
             else {
                 ;
             }
