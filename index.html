@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="main.css" rel="stylesheet">
 </head>
-  <body>
+  <body class="dark">
     <!-- 모달창 -->
     <div class="black-bg">
         <div class="white-bg">
@@ -48,6 +48,17 @@
         <h4>Shirts on Sale</h4>
         <button id="login" class="btn btn-danger">로그인</button>
     </div>
+
+    <div class="alert alert-danger">
+        5초 이내 구매 시 사은품 증정!
+    </div>
+
+    <script>
+        const timeAlert = document.getElementsByClassName('alert')[0];
+        setTimeout(function() {
+            timeAlert.style.display = 'none';
+        }, 5000); // 1초후에 해당 함수 실행됨
+    </script>
 
     <script>
         // 변수
