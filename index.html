@@ -54,10 +54,26 @@
     </div>
 
     <script>
+        let timeCount = 5;
         const timeAlert = document.getElementsByClassName('alert')[0];
-        setTimeout(function() {
-            timeAlert.style.display = 'none';
-        }, 5000); // 1초후에 해당 함수 실행됨
+        setInterval(function() {
+            if(timeCount == 0)
+                timeAlert.style.display = 'none';
+            
+            timeCount--;
+            // 내부 텍스트 가져오기
+            let getText = timeAlert.textContent;
+
+            // 숫자 추출
+            let getNum = parseInt(getText.match(/\d+/)[0]);
+
+            // 숫자 대체
+            let newText = getText.replace(/\d+/, timeCount.toString());
+
+            // 대체된 텍스트를 요소에 설정
+            timeAlert.textContent = newText;
+
+        }, 1000); // 5초후에 해당 함수 실행됨
     </script>
 
     <script>
