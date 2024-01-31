@@ -53,6 +53,44 @@
         5초 이내 구매 시 사은품 증정!
     </div>
 
+    <!-- 캐러셀 -->
+    <div style="overflow: hidden;"> <!-- 삐져나온 이미지 숨기려고 만든 겉 박스: 스크롤바 안생김 -->
+        <div class="slide-container">
+            <div class="slide-box">
+                <img src="img\carousel\car1.png"/>
+            </div>
+            <div class="slide-box">
+                <img src="img\carousel\car2.png"/>
+            </div>
+            <div class="slide-box">
+                <img src="img\carousel\car3.png"/>
+            </div>
+        </div>
+    </div>
+
+    <button class="slide-1">1</button>
+    <button class="slide-2">2</button>
+    <button class="slide-3">3</button>
+
+    <script>
+        const slideBtn1 = document.getElementsByClassName('slide-1')[0];
+        slideBtn1.addEventListener('click', function() {
+            const slide = document.getElementsByClassName('slide-container')[0];
+            slide.style.transform = 'translateX(0)';
+        });
+
+        const slideBtn2 = document.getElementsByClassName('slide-2')[0];
+        slideBtn2.addEventListener('click', function() {
+            const slide = document.getElementsByClassName('slide-container')[0];
+            slide.style.transform = 'translateX(-100vw)';
+        });
+
+        const slideBtn3 = document.getElementsByClassName('slide-3')[0];
+        slideBtn3.addEventListener('click', function() {
+            const slide = document.getElementsByClassName('slide-container')[0];
+            slide.style.transform = 'translateX(-200vw)';
+        });
+    </script>
     <script>
         let timeCount = 5;
         const timeAlert = document.getElementsByClassName('alert')[0];

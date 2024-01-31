@@ -34,3 +34,23 @@
     background-color: black;
     color: white;
 } */
+
+/* -------------------------캐러셀---------------------*/
+
+/* slide-container를 왼쪽으로 이동시키면 됨 */
+.slide-container {
+  /* 브라우저 폭(100vw)의 3배 */
+  width: 300vw; 
+  /* margin-left: -200vw; */
+  /* transform: translateX(-100vw); */
+  /* margin-left보다 부드러워서 성능상 굳 */
+  transition: all 1s;
+}
+.slide-box {
+  width: 100vw;
+  float: left;
+}
+
+.slide-box img {
+  width: 100%;
+}
