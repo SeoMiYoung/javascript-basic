@@ -81,16 +81,12 @@
         preSlideBtn.addEventListener('click', function() {
             const slide = document.querySelector('.slide-container');
 
-            if(현재사진번호 == 1) {
+            if(현재사진번호 == 1) { // 첫번째 슬라이드 라면
                 ;
             }
-            else if(현재사진번호 == 2) {
-                slide.style.transform = 'translateX(0)';
-                현재사진번호 = 1;
-            }
             else {
-                slide.style.transform = 'translate(-100vw)';
-                현재사진번호 = 2;
+                slide.style.transform = 'translateX(-'+ (현재사진번호-2).toString() +'00vw)';
+                현재사진번호--;
             }
         });
 
@@ -98,16 +94,12 @@
         nextSlideBtn.addEventListener('click', function() {
             const slide = document.querySelector('.slide-container');
 
-            if(현재사진번호 == 1) {
-                slide.style.transform = 'translateX(-100vw)';
-                현재사진번호 = 2;
-            }
-            else if(현재사진번호 == 2) {
-                slide.style.transform = 'translateX(-200vw)';
-                현재사진번호 = 3;
+            if(현재사진번호 == 3) { // 마지막 슬라이드 라면
+                ;
             }
             else {
-                ;
+                slide.style.transform = 'translateX(-'+ 현재사진번호.toString() +'00vw)';
+                현재사진번호++;
             }
         });
         
