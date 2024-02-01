@@ -54,3 +54,13 @@
 .slide-box img {
   width: 100%;
 }
+
+.navbar { 
+  position: fixed; /* 상단 고정 */
+  width: 100%; 
+  z-index: 5;
+}
+
+.navbar-brand {
+  font-size: 30px; /* 애니메이션 시작 스타일 */
+}
