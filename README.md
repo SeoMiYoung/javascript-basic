@@ -1,6 +1,9 @@
 # javascript-basic
 자바스크립트 입문 공부
 
+# 공부 기간
+2024.01.25 ~ 
+
 ### ✅ Commit
 <table>
   <tr>
