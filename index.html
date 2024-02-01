@@ -74,10 +74,44 @@
     <button class="slide-3">3</button>
     <button class="next-btn">다음</button>
 
+    <div class="lorem" style="width: 600px; height: 100px; overflow-y: scroll">
+        Lorem ipsum dolor sit amet, 
+        consectetur adipisicing elit. Quae voluptas voluptatum minus praesentium fugit debitis at, 
+        laborum ipsa itaque placeat sit, excepturi eius. Nostrum perspiciatis, 
+        eligendi quae consectetur praesentium exercitationem.
+        Lorem ipsum dolor sit amet, 
+        consectetur adipisicing elit. Quae voluptas voluptatum minus praesentium fugit debitis at, 
+        laborum ipsa itaque placeat sit, excepturi eius. Nostrum perspiciatis, 
+        eligendi quae consectetur praesentium exercitationem.
+        Lorem ipsum dolor sit amet, 
+        consectetur adipisicing elit. Quae voluptas voluptatum minus praesentium fugit debitis at, 
+        laborum ipsa itaque placeat sit, excepturi eius. Nostrum perspiciatis, 
+        eligendi quae consectetur praesentium exercitationem.
+        Lorem ipsum dolor sit amet, 
+        consectetur adipisicing elit. Quae voluptas voluptatum minus praesentium fugit debitis at, 
+        laborum ipsa itaque placeat sit, excepturi eius. Nostrum perspiciatis, 
+        eligendi quae consectetur praesentium exercitationem.
+    </div>
+
     <!-- 그냥 단순히 scroll bar를 생성하기 위해서 길이가 긴 박스 생성 -->
     <div style="height: 1000px;">
     </div>
     
+    <script>
+        // div의 스크롤바 내린 양 == div의 실제 높이
+        document.querySelector('.lorem').addEventListener('scroll', function() {
+            // <div>스크롤바 내린 높이는 셀렉터.scrollTop
+                // scrollTop은 조금 문제가 있는데.. 정말 딱 스크롤바를 내린 길이만큼만 출력해줘서,
+                // 제대로 측정하려면, div박스의 height까지 더해줘야함!
+
+                // console.log(document.querySelector('.lorem').scrollTop);
+                // console.log(document.querySelector('.lorem').scrollHeight);
+            if((document.querySelector('.lorem').scrollTop + 100)==(document.querySelector('.lorem').scrollHeight)) {
+                alert("lorem 글을 끝까지 다 읽었군요!");
+            }
+        });
+
+    </script>
     <script>
         window.addEventListener('scroll', function() {
             console.log(window.scrollY);
