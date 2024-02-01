@@ -80,16 +80,14 @@
     
     <script>
         window.addEventListener('scroll', function() {
-            // 현재 페이지가 스크롤 될때마다 실행시켜줌
-            // window는 그냥 html 페이지를 의미합니다.
-            // document도 html페이지를 의미하나, 보통 scroll 이벤트 걸때는 window로 한다.
-            // console.log(window.scrollY); // 유저가 얼마나 스크롤바 내렸나
-            // window.scrollTo(x좌표, y좌표); // 원하는 곳으로 스크롤 가능
-            // Bootstrap 설치 시, 스크롤을 스무스하게 처리해주기도 함
-                // 그게 마음에 안들면, :root { scroll-behavior: auto; } 라고 적으면 됨
-            // window.scrollBy(x,y) // 현재 위치부터 강제로 스크롤하기
-            // $(window).scrollTop() // 현재 스크롤바 위치 출력
-                // 사실상 scrollY랑 똑같음
+            console.log(window.scrollY);
+            const getNavbar = document.getElementsByClassName('navbar-brand')[0];
+
+            if(window.scrollY >= 100) {
+                getNavbar.classList.add('navbar-scroll');
+            } else {
+                getNavbar.classList.remove('navbar-scroll');
+            }
         });
     </script>
 

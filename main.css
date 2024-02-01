@@ -63,4 +63,9 @@
 
 .navbar-brand {
   font-size: 30px; /* 애니메이션 시작 스타일 */
+  transition: all 1s;
+}
+
+.navbar-scroll {
+  font-size: 20px; /* 애니메이션 끝 스타일 */
 }
