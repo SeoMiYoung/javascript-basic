@@ -68,25 +68,68 @@
         </div>
     </div>
 
+    <button class="pre-btn">이전</button>
     <button class="slide-1">1</button>
     <button class="slide-2">2</button>
     <button class="slide-3">3</button>
+    <button class="next-btn">다음</button>
+    <script>
+        // 현재 화면에 보고있는 사진 알아내는게 어렵네 ㅠㅠ
+        let 현재사진번호 = 1;
 
+        const preSlideBtn = document.getElementsByClassName('pre-btn')[0];
+        preSlideBtn.addEventListener('click', function() {
+            const slide = document.querySelector('.slide-container');
+
+            if(현재사진번호 == 1) {
+                ;
+            }
+            else if(현재사진번호 == 2) {
+                slide.style.transform = 'translateX(0)';
+                현재사진번호 = 1;
+            }
+            else {
+                slide.style.transform = 'translate(-100vw)';
+                현재사진번호 = 2;
+            }
+        });
+
+        const nextSlideBtn = document.getElementsByClassName('next-btn')[0];
+        nextSlideBtn.addEventListener('click', function() {
+            const slide = document.querySelector('.slide-container');
+
+            if(현재사진번호 == 1) {
+                slide.style.transform = 'translateX(-100vw)';
+                현재사진번호 = 2;
+            }
+            else if(현재사진번호 == 2) {
+                slide.style.transform = 'translateX(-200vw)';
+                현재사진번호 = 3;
+            }
+            else {
+                ;
+            }
+        });
+        
+    </script>
     <script>
         const slideBtn1 = document.getElementsByClassName('slide-1')[0];
         slideBtn1.addEventListener('click', function() {
+            현재사진번호 = 1;
             const slide = document.getElementsByClassName('slide-container')[0];
             slide.style.transform = 'translateX(0)';
         });
 
         const slideBtn2 = document.getElementsByClassName('slide-2')[0];
         slideBtn2.addEventListener('click', function() {
+            현재사진번호 = 2;
             const slide = document.getElementsByClassName('slide-container')[0];
             slide.style.transform = 'translateX(-100vw)';
         });
 
         const slideBtn3 = document.getElementsByClassName('slide-3')[0];
         slideBtn3.addEventListener('click', function() {
+            현재사진번호 = 3;
             const slide = document.getElementsByClassName('slide-container')[0];
             slide.style.transform = 'translateX(-200vw)';
         });
