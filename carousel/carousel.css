@@ -1,0 +1,69 @@
+/* -------------------------캐러셀---------------------*/
+
+body {
+    font-family: 'Lora', serif;
+    font-weight: 1200;
+    margin: 0; /* body의 기본 마진을 제거합니다. */
+    background-color: #80634C;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 화면의 높이를 전체 차지하도록 설정합니다. */
+}
+.carousel-box {
+    overflow: hidden;
+    background-color: yellow;
+    width: 1200px;
+    margin: 0 auto;
+
+}
+/* slide-container를 왼쪽으로 이동시키면 됨 */
+.slide-container {
+    /* 브라우저 폭(100vw)의 3배 */
+    width: 3200px; 
+    /* margin-left: -200vw; */
+    /* transform: translateX(-100vw); */
+    /* margin-left보다 부드러워서 성능상 굳 */
+    transition: all 1s;
+    background-color: yellow;
+}
+.slide-box {
+    width: 400px;
+    float: left;
+}
+  
+.slide-box img {
+    width: 400px;
+    height: 500px;
+}
+
+.carousel-btn {
+    margin-top: 30px;
+    /* background-color: pink; */
+    width: 100%;
+    text-align: center;
+
+    button {
+        width: 180px;
+        height: 50px;
+        margin: 10px;
+        background-color: #1AAFBC;
+        border-radius: 50px;
+        border: 1px transparent solid;
+        color: #80634C;
+        font-size: 30px;
+        font-weight: bold;
+        font-family: 'Lora', serif;
+    }
+}
+
+.explanation {
+    margin: 30px;
+    font-size: 60px;
+    text-align: center;
+    /* background-color: pink; */
+    color: #1AAFBC;
+    font-weight: bold;
+}

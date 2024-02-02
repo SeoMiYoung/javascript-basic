@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gallery of Happy Moments</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="./carousel.css" rel="stylesheet">
+</head>
+  <body class="dark">
+    <p class="explanation">
+        Gallery of Happy Moments
+    </p>
+    <!-- 캐러셀 -->
+    <div class="carousel-box"> <!-- 삐져나온 이미지 숨기려고 만든 겉 박스: 스크롤바 안생김 -->
+        <div class="slide-container">
+            <div class="slide-box">
+                <img src="..\img\carousel\girl1.jpg"/>
+            </div>
+            <div class="slide-box">
+                <img src="..\img\carousel\girl2.jpg"/>
+            </div>
+            <div class="slide-box">
+                <img src="..\img\carousel\girl3.jpg"/>
+            </div>
+            <div class="slide-box">
+                <img src="..\img\carousel\girl4.jpg"/>
+            </div>
+            <div class="slide-box">
+                <img src="..\img\carousel\girl5.jpg"/>
+            </div>
+            <div class="slide-box">
+                <img src="..\img\carousel\girl6.jpg"/>
+            </div>
+            <div class="slide-box">
+                <img src="..\img\carousel\girl7.jpg"/>
+            </div>
+            <div class="slide-box">
+                <img src="..\img\carousel\girl8.jpg"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="carousel-btn">
+        <button class="pre-btn">Before</button>
+        <button class="next-btn">Next</button>
+    </div>
+
+    <script>
+        // 현재 화면에 보고있는 사진 알아내는게 어렵네 ㅠㅠ
+        let 현재사진번호 = 1;
+        const IMGWIDTH = 400; // 이미지 너비 저장
+
+        const preSlideBtn = document.getElementsByClassName('pre-btn')[0];
+        preSlideBtn.addEventListener('click', function() {
+            const slide = document.querySelector('.slide-container');
+
+            if(현재사진번호 != 1) { 
+                // 2 --> 1 (0)
+                // 3 --> 2 (400)
+                // 4 --> 3 (800)
+                let movePixel = (현재사진번호-2)*(400);
+                slide.style.transform = 'translateX(-'+ (movePixel).toString() +'px)';
+                현재사진번호--;
+            }
+        });
+
+        const nextSlideBtn = document.getElementsByClassName('next-btn')[0];
+        nextSlideBtn.addEventListener('click', function() {
+            const slide = document.querySelector('.slide-container');
+
+            if(현재사진번호 != 6) {
+                let movePixel = (현재사진번호)*(400);
+                slide.style.transform = 'translateX(-'+ (movePixel).toString() +'px)';
+                현재사진번호++;
+            }
+            
+        });
+        // 0
+        // 1 --> 2 (-400)
+        // 2 --> 3 (-800)
+        // 3 --> 4 (-1200)
+        
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
