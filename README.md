@@ -27,7 +27,8 @@
 <details>
 <summary>이벤트 버블링</summary>
 <br/>
-  
+
+자바스크립트에서 이벤트 버블링은 항상 일어납니다.
 ```
 <div class="black-bg">  <!-- 이거도 클릭한거임 -->
   <div class="white-bg">  <!-- 이거도 클릭한거임 -->
