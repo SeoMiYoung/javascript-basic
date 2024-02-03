@@ -42,6 +42,17 @@ e.target; // 유저가 실제로 클릭한 html요소를 알려줌<br/>
 e.currentTarget; // 이벤트리스너가 달린곳을 알려줌(this; 사용과 똑같음)<br/>
 e.preventDefault(); // 클릭이 되지 않은 것처럼 동작하게 해줌(폼에서 유용)<br/>
 e.stopProgation(); // 상위요소로 가는 이벤트 버블링을 막아줌<br/>
+</details>
 
+<details>
+  <summary>data-자료이름="값"</summary><br/>
+
+  html태그에 몰래 정보를 숨기는 기능이다.
+  ```
+  <li class="tab-button" data-id="0">Products</li>
+
+  // 숨겼던 자료 출력은 셀렉터.dataset.자료이름
+  document.getElementsByClassName('tab-button')[0].dataset.id
+  ```
 </details>
 
