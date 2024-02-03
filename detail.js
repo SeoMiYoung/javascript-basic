@@ -8,15 +8,7 @@ let tabButtons = document.getElementsByClassName('tab-button');
 let tabContents = document.getElementsByClassName('tab-content');
 
 document.getElementsByClassName('list')[0].addEventListener('click', function(e) {
-    if(e.target == tabButtons[0]) {
-        openTab(0);
-    }
-    else if(e.target == tabButtons[1]) {
-        openTab(1);
-    }
-    else {
-        openTab(2);
-    }
+    openTab(e.target.dataset.id);
 });
 
 function openTab(n) {
