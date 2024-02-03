@@ -98,6 +98,12 @@
     </div>
     
     <script>
+        let blackBg = document.getElementsByClassName('black-bg')[0];
+        blackBg.addEventListener('click', function() {
+            blackBg.classList.remove('show-modal');
+        });
+    </script>
+    <script>
         document.querySelector('.lorem').addEventListener('scroll', function() {
             // div의 스크롤바 양 + 눈에 보이는 div높이 == div의 실제높이
                 // document.querySelector('.lorem').clientHeight;
