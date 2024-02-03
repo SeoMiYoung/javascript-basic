@@ -99,8 +99,9 @@
     
     <script>
         let blackBg = document.getElementsByClassName('black-bg')[0];
-        blackBg.addEventListener('click', function() {
-            blackBg.classList.remove('show-modal');
+        blackBg.addEventListener('click', function(e) {
+            if(e.target == blackBg) // 내가 실제로 누른거 == 까만배경
+                blackBg.classList.remove('show-modal');
         });
     </script>
     <script>
