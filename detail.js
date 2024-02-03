@@ -7,17 +7,27 @@
 let tabButtons = document.getElementsByClassName('tab-button');
 let tabContents = document.getElementsByClassName('tab-content');
 
-for(let n=0; n<tabButtons.length; n++) {
-    tabButtons[n].addEventListener('click', function() {
-        for(let i=0; i<tabButtons.length; i++) {
-            if(n==i) {
-                tabButtons[i].classList.add('orange');
-                tabContents[i].classList.add('show');
-            }
-            else {
-                tabButtons[i].classList.remove('orange');
-                tabContents[i].classList.remove('show');
-            }
+document.getElementsByClassName('list')[0].addEventListener('click', function(e) {
+    if(e.target == tabButtons[0]) {
+        openTab(0);
+    }
+    else if(e.target == tabButtons[1]) {
+        openTab(1);
+    }
+    else {
+        openTab(2);
+    }
+});
+
+function openTab(n) {
+    for(let i=0; i<tabButtons.length; i++) {
+        if(n==i) {
+            tabButtons[i].classList.add('orange');
+            tabContents[i].classList.add('show');
         }
-    });
+        else {
+            tabButtons[i].classList.remove('orange');
+            tabContents[i].classList.remove('show');
+        }
+    }
 }
