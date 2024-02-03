@@ -55,4 +55,25 @@ e.stopProgation(); // 상위요소로 가는 이벤트 버블링을 막아줌<br
   document.getElementsByClassName('tab-button')[0].dataset.id
   ```
 </details>
+<details>
+<summary>쓸만한 자바스크립트 라이브러리들</summary><br/>
+1. Swiper<br/>
+- 캐러셀의 경우, 직접만들어도 되지만, 좀 이쁘게 또는 쉽게 여러기능을 만들고 쉽다면 Swiper 라이브러리를 써도 됨<br/><br/>
+2. Chart.js<br/>
+- 웹페이지에 차트를 만들고 싶으면 쓰면 됨<br/><br/>
+3. Animate On Scroll<br/>
+- 스크롤 내리면 요소가 서서히 등장하는 애니메이션을 만들고 싶을 때 쓰면 됨<br/><br/>
+4. EmailJS<br/>
+- 원래 이메일 전송은 서버가 해야하지만, Gmail이런거 서버를 잠깐 빌리면 자바스크립트만으로 이메일 전송 가능<br/>
+- user가 내 이메일 계정으로 이메일 전송도 가능하고, 내 이메일 계정으로 남에게 이메일 전송도 가능함<br/>
+<br/>
+5. Lodash<br/>
+- array, object, 문자, 숫자 자료를 다루기 편해지는 기본함수들 제공
+<br/><br/>
+6. React/Vue<br/>
+- 페이지가 너무 많아서 UI재활용이 자주 필요한 사이트나, 모바일 앱처럼 페이지 이동 없이 동작하는 Single Page Application을 만들 때 유용한 자바스크립트 라이브러리<br/>
+<br/>
+7. Fullpage.js<br/>
+- 웹페이지를 ppt처럼 만들어줌(하지만 이런 UI는 유행이 지남) <br/>
+</details>
 
