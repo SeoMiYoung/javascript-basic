@@ -23,3 +23,8 @@ function openTab(n) {
         }
     }
 }
+
+// Array와 Object 자료형
+let car = {name: '소나타', price: [50000, 3000, 4000]};
+const cardElement = document.querySelector('.card.p-3');
+cardElement.textContent = `${car['name']} / ${car['price'][0]}`;
