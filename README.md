@@ -111,3 +111,11 @@ e.stopProgation(); // 상위요소로 가는 이벤트 버블링을 막아줌<br
   - 반면, function안에서 this를 사용하면, this가 알맞게 재정의됨<br/>
   
 </details>
+
+<details>
+<summary>ajax</summary>
+<br/>
+✔️ API 문서<br/>
+서버 개발자들은 가끔 API문서를 작성합니다. 이 경로(url)로 GET요청하면, 이런 데이터 보내준다는 설명들이 적혀있는게 API 문서입니다.
+이런거보고 여러분들이 서버랑 통신하면 됩니다.<br/>
+</details>
