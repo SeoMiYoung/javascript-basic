@@ -117,5 +117,19 @@ e.stopProgation(); // 상위요소로 가는 이벤트 버블링을 막아줌<br
 <br/>
 ✔️ API 문서<br/>
 서버 개발자들은 가끔 API문서를 작성합니다. 이 경로(url)로 GET요청하면, 이런 데이터 보내준다는 설명들이 적혀있는게 API 문서입니다.
-이런거보고 여러분들이 서버랑 통신하면 됩니다.<br/>
+이런거보고 여러분들이 서버랑 통신하면 됩니다.<br/><br/>
+
+✔️ ajax란?<br/>
+새로고침없이, GET/POST를 요청하는 기능입니다.<br/><br/>
+
+✔️ 제이쿼리로 get요청<br/>
+```
+$.get('https://codingapple1.github.io/hello.txt213')
+  .done(function(data) {
+    console.log(data); // 성공 시
+  })
+  .fail(function() {
+    console.log('실패함'); // ajax 실패시 특정 코드 실행하고 싶으면
+  })
+```
 </details>
