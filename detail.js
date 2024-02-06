@@ -28,3 +28,16 @@ function openTab(n) {
 let car = {name: '소나타', price: [50000, 3000, 4000]};
 const cardElement = document.querySelector('.card.p-3');
 cardElement.textContent = `${car['name']} / ${car['price'][0]}`;
+
+// select
+const selectElement = document.querySelector('.form-select');
+const selectShirtsSize = document.getElementsByClassName('shirts-size')[0];
+// select 요소에 change 이벤트 리스너 추가
+selectElement.addEventListener('change', function(e) {
+    if(e.target.value == '셔츠') {
+        selectShirtsSize.style.display = 'block';
+    }
+    else {
+        selectShirtsSize.style.display = 'none';
+    }
+});
