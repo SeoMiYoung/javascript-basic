@@ -156,15 +156,17 @@ jQuery의 $.get() 이런 건, JSON으로 자료가 도착하면 알아서 array/
 <table>
   <tr>
     <th>Ajax</th>
-    <td>ㅇㅇ</td>
+    <td>
+      Asyncchronous Javascript And XML의 약어로, 말 그대로 javascript를 사용한 비동기 HTTP 통신 기술입니다. 비동기적 통신으로 인해 페이지 전체를 로딩하지 않고(항상 새로고침 안하고) 일부분만 갱신할 수 있습니다. 그리고 ajax를 더 편리하게 jquery로 사용할 수 있어서 묶어서 사용할때가 많다. 그래서 같이 묶여서 불릴때가 있는데, 절대 같은건 아니라는거~
+    </td>
   </tr>
   <tr>
     <th>Axios</th>
-    <td>ㅇㅇ</td>
+    <td>fetch보다 훨씬 쓰기 편하고 기능(옵션)들이 많이 들어있다. JSON 변환 과정도 빠져서 매우 편리하다. 크로스 호환성도 좋다. 단, 내장 라이브러리가 아니기 때문에 별도의 설치가 필요하다.</td>
   </tr>
   <tr>
     <th>Fetch</th>
-    <td>ㅇㅇ</td>
+    <td>ES6부터 들어가게 된 Javascript 내장 라이브러리이다. 내장 라이브러리라서 별도의 설치(import)가 필요없다. 그리고 Promise기반으로 만들어졌다. Promise기반이다보니, 데이터를 다루기 편하다. 그러나 Axios에 비해 기능들이 부족하고, JSON으로 변환을 해주어야 하는 과정이 생기고, 지원하지 않는 브라우저가 있고(IE11), 네트워크 에러 발생 시, timeout 옵션이 없어 기다려야한다는 단점들이 있다.</td>
   </tr>
 </table>
 </details>
