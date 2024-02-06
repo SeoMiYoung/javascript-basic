@@ -84,3 +84,22 @@ e.stopProgation(); // 상위요소로 가는 이벤트 버블링을 막아줌<br
   1. SSR: html파일을 이미 서버에서 다 완성해서 보냄, 서버가 쫌 귀찮음<br/>
   2. CSR: 서버에서 클라이언트에게 '텅 빈 html파일 + 데이터'를 보냄 --> html을 완성시키는 걸 js에게 시킴 --> user의 브라우저에서 일하는 js는 이리저리 일해서 html파일을 채우게 됨<br/>
 </details>
+
+<details>
+  <summary>html 생성법</summary><br/>
+  
+  방법1)<br/>
+
+  ```
+    let a = document.createElement('p'); 
+    a.innerHTML = '안녕'; 
+    document.querySelector('#test').appendChild(a); 
+  ```
+
+  방법2)<br/>
+
+  ```
+    let a = '<p>안녕</p>';
+    document.querySelector('#test').insertAdjacentHTML('beforeend', a);
+  ```
+</details>
