@@ -103,3 +103,11 @@ e.stopProgation(); // 상위요소로 가는 이벤트 버블링을 막아줌<br
     document.querySelector('#test').insertAdjacentHTML('beforeend', a);
   ```
 </details>
+
+<details>
+  <summary>arrow function에서의 this</summary>
+  <br/>
+  - arrow function안에서 this를 사용하면, 바깥에 있던 this를 그대로 가져다씀<br/>
+  - 반면, function안에서 this를 사용하면, this가 알맞게 재정의됨<br/>
+  
+</details>
