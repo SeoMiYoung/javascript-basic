@@ -103,3 +103,50 @@ e.stopProgation(); // 상위요소로 가는 이벤트 버블링을 막아줌<br
     document.querySelector('#test').insertAdjacentHTML('beforeend', a);
   ```
 </details>
+
+<details>
+  <summary>arrow function에서의 this</summary>
+  <br/>
+  - arrow function안에서 this를 사용하면, 바깥에 있던 this를 그대로 가져다씀<br/>
+  - 반면, function안에서 this를 사용하면, this가 알맞게 재정의됨<br/>
+  
+</details>
+
+<details>
+<summary>ajax</summary>
+<br/>
+✔️ API 문서<br/>
+서버 개발자들은 가끔 API문서를 작성합니다. 이 경로(url)로 GET요청하면, 이런 데이터 보내준다는 설명들이 적혀있는게 API 문서입니다.
+이런거보고 여러분들이 서버랑 통신하면 됩니다.<br/><br/>
+
+✔️ ajax란?<br/>
+서버에 GET/POST 요청을 할 때 새로고침 없이 데이터를 주고받을 수 있게 도와주는 간단한 브라우저 기능을 AJAX라고 합니다.
+AJAX를 사용하면, 새로고침 없이도 쇼핑몰 상품을 더 가져올 수 있고, 새로고침 없이도 댓글을 서버로 전송할 수도 있고..그렇습니다.
+<br/>
+
+✔️ 제이쿼리로 get요청<br/>
+```
+$.get('https://codingapple1.github.io/hello.txt213')
+  .done(function(data) {
+    console.log(data); // 성공 시
+  })
+  .fail(function() {
+    console.log('실패함'); // ajax 실패시 특정 코드 실행하고 싶으면
+  })
+```
+
+✔️ fetch<br/>
+```
+fetch('https://codingapple1.github.io/price.json')
+  .then(res => res.json())
+  .then(function(data){
+    console.log(data)
+  })
+  .catch(function(error){
+    console.log('실패함')
+  });
+```
+생자바스크립트의 경우에는 fetch같은 걸 사용해서 AJAX요청이 가능합니다. fetch함수는 Edge 브라우저 이상에서만 동작합니다. 제이쿼리를 썼을때보다 코드 한줄이 더 필요한데, 그 이유는 제이쿼리를 썼을때는 알아서 object데이터를 JSON으로 바꿔서 전송해줬는데, 생자바스크립트의 경우 그렇기 않기 때문입니다. 
+<br/>
+jQuery의 $.get() 이런 건, JSON으로 자료가 도착하면 알아서 array/object자료로 바꿔줍니다. 그러나, 기본함수 fetch()같은 건, JSON으로 자료가 도착하면 알아서 array/object 자료로 바꿔주지 않습니다. 그래서 fetch()로 가져온 결과를 array/object로 바꾸고 싶으면 res.json()이런 코드 한 줄 추가하면 됩니다. 그게 귀찮으면 jQuery나 axios이런 라이브러리 설치하면 ajax가 약간 더 간편해집니다.
+</details>
