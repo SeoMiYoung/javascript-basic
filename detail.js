@@ -30,14 +30,34 @@ const cardElement = document.querySelector('.card.p-3');
 cardElement.textContent = `${car['name']} / ${car['price'][0]}`;
 
 // select
-const selectElement = document.querySelector('.form-select');
-const selectShirtsSize = document.getElementsByClassName('shirts-size')[0];
+let selectElement = document.querySelectorAll('.form-select');
+
 // select 요소에 change 이벤트 리스너 추가
-selectElement.addEventListener('change', function(e) {
+selectElement[0].addEventListener('change', function(e) {
     if(e.target.value == '셔츠') {
-        selectShirtsSize.style.display = 'block';
+        let 셔츠템플릿 = `
+            <option>95</option>
+            <option>100</option>
+            <option>105</option>
+        `
+        selectElement[1].classList.remove('form-hide');
+        selectElement[1].innerHTML = '';
+        selectElement[1].insertAdjacentHTML('beforeend', 셔츠템플릿);
+    }
+    else if(e.target.value == '바지') {
+        let 바지템플릿 = `
+            <option>26</option>
+            <option>27</option>
+            <option>28</option>
+            <option>29</option>
+            <option>30</option>
+        `;
+        selectElement[1].classList.remove('form-hide');
+        selectElement[1].innerHTML = '';
+        selectElement[1].insertAdjacentHTML('beforeend', 바지템플릿);
     }
     else {
-        selectShirtsSize.style.display = 'none';
+        selectElement[1].classList.add('form-hide');
     }
 });
+
