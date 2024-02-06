@@ -23,9 +23,9 @@
 #### 🔊 별표시 
 공부하다가 어려웠던 건, 어려웠던 정도만큼 ⭐표시가 commit 문구 앞에 붙습니다. (⭐~⭐⭐⭐)
 
-# ☑️ Memo
+# ✍️ Memo
 <details>
-<summary>이벤트 버블링</summary>
+<summary>☑️ 이벤트 버블링</summary>
 <br/>
 
 자바스크립트에서 이벤트 버블링은 항상 일어납니다.
@@ -45,7 +45,7 @@ e.stopProgation(); // 상위요소로 가는 이벤트 버블링을 막아줌<br
 </details>
 
 <details>
-  <summary>data-자료이름="값"</summary><br/>
+  <summary>☑️ data-자료이름="값"</summary><br/>
 
   html태그에 몰래 정보를 숨기는 기능이다.
   ```
@@ -56,7 +56,7 @@ e.stopProgation(); // 상위요소로 가는 이벤트 버블링을 막아줌<br
   ```
 </details>
 <details>
-<summary>쓸만한 자바스크립트 라이브러리들</summary><br/>
+<summary>☑️ 쓸만한 자바스크립트 라이브러리들</summary><br/>
 1. Swiper<br/>
 - 캐러셀의 경우, 직접만들어도 되지만, 좀 이쁘게 또는 쉽게 여러기능을 만들고 쉽다면 Swiper 라이브러리를 써도 됨<br/><br/>
 2. Chart.js<br/>
@@ -78,7 +78,7 @@ e.stopProgation(); // 상위요소로 가는 이벤트 버블링을 막아줌<br
 </details>
 
 <details>
-  <summary>서버/클라이언트 사이드 렌더링</summary>
+  <summary>☑️ 서버/클라이언트 사이드 렌더링</summary>
   <br/>
   서버에서 html파일을 user에게 보낼 때, 방법이 두가지가 있습니다.<br/>
   1. SSR: html파일을 이미 서버에서 다 완성해서 보냄, 서버가 쫌 귀찮음<br/>
@@ -86,7 +86,7 @@ e.stopProgation(); // 상위요소로 가는 이벤트 버블링을 막아줌<br
 </details>
 
 <details>
-  <summary>html 생성법</summary><br/>
+  <summary>☑️ html 생성법</summary><br/>
   방법1은 코드가 너무 길고 복잡하기 때문에, 특별한 이유가 없으면 2번 방법을 씁니다(1번이 아주 미세하게 빠르게 동작함). <br/><br/>
   방법1)<br/>
 
@@ -105,7 +105,7 @@ e.stopProgation(); // 상위요소로 가는 이벤트 버블링을 막아줌<br
 </details>
 
 <details>
-  <summary>arrow function에서의 this</summary>
+  <summary>☑️ arrow function에서의 this</summary>
   <br/>
   - arrow function안에서 this를 사용하면, 바깥에 있던 this를 그대로 가져다씀<br/>
   - 반면, function안에서 this를 사용하면, this가 알맞게 재정의됨<br/>
@@ -113,7 +113,7 @@ e.stopProgation(); // 상위요소로 가는 이벤트 버블링을 막아줌<br
 </details>
 
 <details>
-<summary>ajax</summary>
+<summary>☑️ ajax</summary>
 <br/>
 ✔️ API 문서<br/>
 서버 개발자들은 가끔 API문서를 작성합니다. 이 경로(url)로 GET요청하면, 이런 데이터 보내준다는 설명들이 적혀있는게 API 문서입니다.
@@ -121,7 +121,7 @@ e.stopProgation(); // 상위요소로 가는 이벤트 버블링을 막아줌<br
 
 ✔️ ajax란?<br/>
 서버에 GET/POST 요청을 할 때 새로고침 없이 데이터를 주고받을 수 있게 도와주는 간단한 브라우저 기능을 AJAX라고 합니다.
-AJAX를 사용하면, 새로고침 없이도 쇼핑몰 상품을 더 가져올 수 있고, 새로고침 없이도 댓글을 서버로 전송할 수도 있고..그렇습니다. (근데 요새는 다 Axios쓴다고 함)
+AJAX를 사용하면, 새로고침 없이도 쇼핑몰 상품을 더 가져올 수 있고, 새로고침 없이도 댓글을 서버로 전송할 수도 있고..그렇습니다. (근데 요새는 다 Axios쓴다고 함, Axios는 Ajax보다 더 편리하고 간결한 HTTP 요청 처리를 위한 라이브러리로, 브라우저와 Node.js에서 모두 사용할 수 있습니다.)
 <br/>
 
 ✔️ 제이쿼리로 get요청<br/>
@@ -149,10 +149,28 @@ fetch('https://codingapple1.github.io/price.json')
 생자바스크립트의 경우에는 fetch같은 걸 사용해서 AJAX요청이 가능합니다. fetch함수는 Edge 브라우저 이상에서만 동작합니다. 제이쿼리를 썼을때보다 코드 한줄이 더 필요한데, 그 이유는 제이쿼리를 썼을때는 알아서 object데이터를 JSON으로 바꿔서 전송해줬는데, 생자바스크립트의 경우 그렇기 않기 때문입니다. 
 <br/>
 jQuery의 $.get() 이런 건, JSON으로 자료가 도착하면 알아서 array/object자료로 바꿔줍니다. 그러나, 기본함수 fetch()같은 건, JSON으로 자료가 도착하면 알아서 array/object 자료로 바꿔주지 않습니다. 그래서 fetch()로 가져온 결과를 array/object로 바꾸고 싶으면 res.json()이런 코드 한 줄 추가하면 됩니다. 그게 귀찮으면 jQuery나 axios이런 라이브러리 설치하면 ajax가 약간 더 간편해집니다.
+<br/>
+
+✔️ Ajax와 Fetch와 Axios 차이점 비교해보기<br/>
+작업을 하다보면, 클라이언트와 서버간의 데이터를 주고 받기 위해서 HTTP통신을 하게 됩니다. 비동기 HTTP 통신에 쓰이는 Ajax, Axios, Fetch의 차이점을 알아봅시다. <br/>
+<table>
+  <tr>
+    <th>Ajax</th>
+    <td>ㅇㅇ</td>
+  </tr>
+  <tr>
+    <th>Axios</th>
+    <td>ㅇㅇ</td>
+  </tr>
+  <tr>
+    <th>Fetch</th>
+    <td>ㅇㅇ</td>
+  </tr>
+</table>
 </details>
 
 <details>
-<summary>로컬스토리지(브라우저 안에 몰래 데이터 저장기능)</summary><br/>
+<summary>☑️ 로컬스토리지(브라우저 안에 몰래 데이터 저장기능)</summary><br/>
 - 데이터를 반영구적으로 저장할 수 있는 방법(브라우저 안의 저장공간 이용)<br/>
 - 저장공간 위치: 개발자도구 --> Application --> 
 </details>
