@@ -32,6 +32,9 @@ cardElement.textContent = `${car['name']} / ${car['price'][0]}`;
 // select
 let selectElement = document.querySelectorAll('.form-select');
 
+// 서버에서 데이터 가져와서 그 개수만큼 <option>을 만든다고 가정하자
+let pants = [28, 30, 32]; // 일단 서버에서 보낸 데이터라고 치자
+
 // select 요소에 change 이벤트 리스너 추가
 selectElement[0].addEventListener('change', function(e) {
     if(e.target.value == '셔츠') {
@@ -45,16 +48,12 @@ selectElement[0].addEventListener('change', function(e) {
         selectElement[1].insertAdjacentHTML('beforeend', 셔츠템플릿);
     }
     else if(e.target.value == '바지') {
-        let 바지템플릿 = `
-            <option>26</option>
-            <option>27</option>
-            <option>28</option>
-            <option>29</option>
-            <option>30</option>
-        `;
         selectElement[1].classList.remove('form-hide');
         selectElement[1].innerHTML = '';
-        selectElement[1].insertAdjacentHTML('beforeend', 바지템플릿);
+
+        pants.forEach(function(index) {
+            selectElement[1].insertAdjacentHTML('beforeend', '<option>'+index+'</option>');
+        });
     }
     else {
         selectElement[1].classList.add('form-hide');
