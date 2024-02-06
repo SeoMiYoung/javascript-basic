@@ -77,3 +77,10 @@ e.stopProgation(); // 상위요소로 가는 이벤트 버블링을 막아줌<br
 - 웹페이지를 ppt처럼 만들어줌(하지만 이런 UI는 유행이 지남) <br/>
 </details>
 
+<details>
+  <summary>서버/클라이언트 사이드 렌더링</summary>
+  <br/>
+  서버에서 html파일을 user에게 보낼 때, 방법이 두가지가 있습니다.<br/>
+  1. SSR: html파일을 이미 서버에서 다 완성해서 보냄, 서버가 쫌 귀찮음<br/>
+  2. CSR: 서버에서 클라이언트에게 '텅 빈 html파일 + 데이터'를 보냄 --> html을 완성시키는 걸 js에게 시킴 --> user의 브라우저에서 일하는 js는 이리저리 일해서 html파일을 채우게 됨<br/>
+</details>
