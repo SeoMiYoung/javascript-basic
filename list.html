@@ -23,7 +23,10 @@
     </div> 
 
     <div class="container">
-        <button class="btn btn-danger">더보기</button>
+        <button class="btn btn-danger" id="more">더보기</button>
+    </div>
+    <div class="container my-3">
+        <button class="btn btn-danger" id="price">가격순정렬</button>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -35,9 +38,6 @@
         ];
     </script> 
     <script>
-        // 더보기 버튼 클릭 횟수
-        let clickCount = 0;
-
         // 상품 목록 3개 만들어오기
         for(let i=0; i<products.length; i++) {
             let 상품템플릿 = `
@@ -47,13 +47,36 @@
                     <p>가격: ${products[i].price}</p>
                 </div>
             `;
-            
+                
             document.querySelector('.row').insertAdjacentHTML('beforeend', 상품템플릿);
         }
     </script>
     <script>
+        document.querySelector('#price').addEventListener('click', function() {
+            // 가격 순 정렬
+            products.sort((a,b) => a.price - b.price);
+
+            // 내용 비우기
+            document.querySelector('.row').innerHTML = '';
+
+            // 정렬 후, 다시 채우기
+            for(let i=0; i<products.length; i++) {
+                let 상품템플릿 = `
+                    <div class="col-sm-4">
+                        <img src="https://via.placeholder.com/600" class="w-100">
+                        <h5>${products[i].title}</h5>
+                        <p>가격: ${products[i].price}</p>
+                    </div>
+                `;
+                document.querySelector('.row').insertAdjacentHTML('beforeend', 상품템플릿);
+            }
+        });
+    </script>
+    <script>
+        let clickCount = 0;
+
         // 버튼 컨트롤
-        document.querySelector('.container .btn').addEventListener('click', function() {
+        document.querySelector('#more').addEventListener('click', function() {
             // 더보기 버튼 누르면 상품 3개 가져와서 출력하기
             let setUrl;
             if(clickCount == 0 || clickCount == 1) {
