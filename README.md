@@ -150,3 +150,9 @@ fetch('https://codingapple1.github.io/price.json')
 <br/>
 jQuery의 $.get() 이런 건, JSON으로 자료가 도착하면 알아서 array/object자료로 바꿔줍니다. 그러나, 기본함수 fetch()같은 건, JSON으로 자료가 도착하면 알아서 array/object 자료로 바꿔주지 않습니다. 그래서 fetch()로 가져온 결과를 array/object로 바꾸고 싶으면 res.json()이런 코드 한 줄 추가하면 됩니다. 그게 귀찮으면 jQuery나 axios이런 라이브러리 설치하면 ajax가 약간 더 간편해집니다.
 </details>
+
+<details>
+<summary>로컬스토리지(브라우저 안에 몰래 데이터 저장기능)</summary><br/>
+- 데이터를 반영구적으로 저장할 수 있는 방법(브라우저 안의 저장공간 이용)<br/>
+- 저장공간 위치: 개발자도구 --> Application --> 
+</details>
