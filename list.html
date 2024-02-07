@@ -78,8 +78,10 @@
                 // 1. 정보 꺼내기 
                 let 꺼낸거 = JSON.parse(localStorage.getItem('cart'));
 
-                // 2. 집어넣기
-                꺼낸거.push(getTitle);
+                if(!꺼낸거.includes(getTitle)) { // 중복검사
+                    // 2. 집어넣기
+                    꺼낸거.push(getTitle);
+                }
 
                 // 3. 다시 넣기
                 localStorage.setItem('cart', JSON.stringify(꺼낸거));
