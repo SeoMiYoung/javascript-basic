@@ -1,0 +1,22 @@
+.grey {
+    background-color: lightgrey;
+    height: 1200px;
+    margin-top: 500px;
+
+}
+.image {
+    /*양 옆 배치*/
+    float: right;
+    width: 400px;
+    
+    position: sticky;
+    /* 
+        position:sticky는 position:fixed와 동작방식이 비슷하다. 
+        position:fixed는 뷰포트에다가 고정시키고 싶을 때 사용하는거잖아.
+    */
+    top: 100px;
+}
+.text {
+    float: left;
+    width: 300px;
+}
