@@ -172,7 +172,30 @@ jQuery의 $.get() 이런 건, JSON으로 자료가 도착하면 알아서 array/
 </details>
 
 <details>
-<summary>☑️ 로컬스토리지(브라우저 안에 몰래 데이터 저장기능)</summary><br/>
+<summary>☑️ 로컬스토리지</summary>
+- 브라우저 안에 몰래 데이터 저장기능, 서버가 없다면 로컬스토리지로 데이터 저장 가능!<br/>
 - 데이터를 반영구적으로 저장할 수 있는 방법(브라우저 안의 저장공간 이용)<br/>
-- 저장공간 위치: 개발자도구 --> Application --> 
+- 저장공간 위치: 개발자도구 --> Application --> 다양한 저장 공간들이 Application에 존재
+  <table>
+    <tr>
+      <th>localStorage, sessionStorage</th>
+      <td>key와 value형태로 저장 가능<br/>단, 5MB의 문자/숫자만 저장 가능
+      <br/>로컬스토리지와 다르게, 세션은 브라우저를 껏다 키면 정보가 날아감. 즉, localStorage는 사이트를 재접속해도 유지되나, sessionStorage는 사이트를 나가면 자동 삭제된다.
+      </td>
+    </tr>
+    <tr>
+      <th>IndexedDB</th>
+      <td>데이터가 크고 복잡할 경우 or 구조화된 대용량 데이터 저장 시</td>
+    </tr>
+    <tr>
+      <th>Cookies</th>
+      <td>유저의 인정 정보를 저장하고 싶을 때 (보통 로그인 정보를 저장함)</td>
+    </tr>
+    <tr>
+      <th>Cache Storage</th>
+      <td>html/css/js파일을 저장하는 곳<br/>
+      우리가 웹사이트를 접속했을 때, html/css/js파일을 매번 새로 다운받는게 아니라, 하드에 몰래 저장해놓고 가져다가 쓰고 싶을 때 사용함
+      </td>
+    </tr>
+  </table>
 </details>
