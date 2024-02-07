@@ -35,6 +35,7 @@
         <button class="btn btn-danger" id="filter">6만원이하 상품만 보기</button>
     </div>
 
+
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script>
         let products = [
@@ -44,6 +45,10 @@
         ];
     </script> 
     <script>
+        localStorage.setItem('서미영', 'SeoMiYoung');
+    </script>
+    <script>
+        
         // 상품 목록 3개 만들어오기
         for(let i=0; i<products.length; i++) {
             let 상품템플릿 = `
@@ -51,11 +56,38 @@
                     <img src="https://via.placeholder.com/600" class="w-100">
                     <h5>${products[i].title}</h5>
                     <p>가격: ${products[i].price}</p>
+                    <button class="buy">구매</button>
                 </div>
             `;
-                
             document.querySelector('.row').insertAdjacentHTML('beforeend', 상품템플릿);
         }
+    </script>
+    <script>
+        // 자바스크립트는 각 요소마다 한개씩 다 이벤트리스너를 달아줘야함
+        // 제이쿼리로 쓴다면, 그냥 굳이 한개씩 안해줘도 한번에 이벤트리스너 걸림
+        // 그게 싫으면, 이벤트 버블링을 써서, 맨 윗 요소에 이벤트리스너 하나만 다는것도 굳
+        document.getElementsByClassName('row')[0].addEventListener('click', function(e) {
+            // 클릭한 버튼 가져오기
+            let clickedBtn = e.target;
+
+            // 형제 요소 찾기
+            let getTitle = clickedBtn.previousElementSibling.previousElementSibling.textContent;
+            
+            // 만약 이미 cart라는 항목이 로컬 스토리지에 있다면
+            if(localStorage.getItem('cart') != null) {
+                // 1. 정보 꺼내기 
+                let 꺼낸거 = JSON.parse(localStorage.getItem('cart'));
+
+                // 2. 집어넣기
+                꺼낸거.push(getTitle);
+
+                // 3. 다시 넣기
+                localStorage.setItem('cart', JSON.stringify(꺼낸거));
+            }
+            else {
+                localStorage.setItem('cart', JSON.stringify([getTitle]));
+            }
+        });
     </script>
     <script>
         document.querySelector('#price').addEventListener('click', function() {
@@ -72,6 +104,7 @@
                         <img src="https://via.placeholder.com/600" class="w-100">
                         <h5>${products[i].title}</h5>
                         <p>가격: ${products[i].price}</p>
+                        <button class="buy">구매</button>
                     </div>
                 `;
                 document.querySelector('.row').insertAdjacentHTML('beforeend', 상품템플릿);
@@ -93,6 +126,7 @@
                         <img src="https://via.placeholder.com/600" class="w-100">
                         <h5>${products[i].title}</h5>
                         <p>가격: ${products[i].price}</p>
+                        <button class="buy">구매</button>
                     </div>
                 `;
                 document.querySelector('.row').insertAdjacentHTML('beforeend', 상품템플릿);
@@ -114,6 +148,7 @@
                         <img src="https://via.placeholder.com/600" class="w-100">
                         <h5>${filteredProducts[i].title}</h5>
                         <p>가격: ${filteredProducts[i].price}</p>
+                        <button class="buy">구매</button>
                     </div>
                 `;
                 document.querySelector('.row').insertAdjacentHTML('beforeend', 상품템플릿);
@@ -145,6 +180,7 @@
                                     <img src="https://via.placeholder.com/600" class="w-100">
                                     <h5>${data[i].title}</h5>
                                     <p>가격: ${data[i].price}</p>
+                                    <button class="buy">구매</button>
                                 </div>
                             `;
                 
