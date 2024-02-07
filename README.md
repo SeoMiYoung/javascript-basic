@@ -180,7 +180,7 @@ jQuery의 $.get() 이런 건, JSON으로 자료가 도착하면 알아서 array/
     <tr>
       <th>localStorage, sessionStorage</th>
       <td>key와 value형태로 저장 가능<br/>단, 5MB의 문자/숫자만 저장 가능(그러나 JSON형태로 바꾸면 localStorag에 array, object형태로 저장 가능)
-      <br/>로컬스토리지와 다르게, 세션은 브라우저를 껏다 키면 정보가 날아감. 즉, localStorage는 사이트를 재접속해도 유지되나, sessionStorage는 사이트를 나가면 자동 삭제된다.
+      <br/>로컬스토리지와 다르게, 세션은 브라우저를 껏다 키면 정보가 날아감. 즉, localStorage는 사이트를 재접속해도 유지되나, sessionStorage는 사이트를 나가면 자동 삭제된다.<br/>참고로, 데이터 수정 과정이 까다로우니 싫으면 서버를 만들던가 하셈..
       </td>
     </tr>
     <tr>
