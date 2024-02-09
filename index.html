@@ -115,10 +115,12 @@
         let moveX;
 
         document.getElementsByClassName('slide-box')[0].addEventListener('mousedown', function(e) {
+            // 만약에 모바일 터치 고려 --> touchstart
             startX = e.clientX;
             눌렀냐 = true;
         });
         document.getElementsByClassName('slide-box')[0].addEventListener('mousemove', function(e) {
+            // 만약에 모바일 터치 고려 --> touchmove
             if(눌렀냐 == true) {
                 // 얼마나 x축으로 드래그 했는지 알 수 있음
                 let finishX = e.clientX;
@@ -129,6 +131,7 @@
             }
         });
         document.getElementsByClassName('slide-box')[0].addEventListener('mouseup', function(e) {
+            // 만약에 모바일 터치 고려 --> touchend
             눌렀냐 = false;
 
             if(moveX >= 460) {
