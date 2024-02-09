@@ -24,7 +24,7 @@
 #### 🔊 별표시 
 공부하다가 어려웠던 건, 어려웠던 정도만큼 ⭐표시가 commit 문구 앞에 붙습니다. (⭐~⭐⭐⭐)
 
-# ✍️ Memo
+# ✍️ Memo(Javascript 기본)
 <details>
 <summary>☑️ 이벤트 버블링</summary>
 <br/>
@@ -297,3 +297,5 @@ jQuery의 $.get() 이런 건, JSON으로 자료가 도착하면 알아서 array/
     </tr>
   </table>
 </details>
+
+# ✍️ Memo(Javascript 중급)
