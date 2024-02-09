@@ -75,6 +75,12 @@ e.stopProgation(); // 상위요소로 가는 이벤트 버블링을 막아줌<br
 <br/>
 7. Fullpage.js<br/>
 - 웹페이지를 ppt처럼 만들어줌(하지만 이런 UI는 유행이 지남) <br/>
+<br/>
+8. Hammer.js<br/>
+- 터치랑 마우스클릭을 동시에 구현해놓은 기능도 포함된 라이브러리<br/>
+- 브라우저간 호환성도 잡아줌<br/>
+- 이벤트리스너 6개말고 1개만 필요<br/>
+- 스와이프, pinch, rotate 이벤트리스너도 제공<br/>
 </details>
 
 <details>
