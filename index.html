@@ -57,7 +57,13 @@
     <div style="overflow: hidden;"> <!-- 삐져나온 이미지 숨기려고 만든 겉 박스: 스크롤바 안생김 -->
         <div class="slide-container">
             <div class="slide-box">
-                <img src="img\carousel\car1.png"/>
+                <!--
+                    draggable="false"를 안해주면, 드래그 시, 금지 아이콘이 뜨는데
+                    그 이유는 원래 html 요소들은 잡아서 끌어서 어디에 가져다가 놓을 수 있는데요,
+                    그걸 drag event라고 합니다. 
+                    그 드래그 이벤트가 발동되는게 싫다면 해당 속성을 넣어주면 됩니다.
+                -->
+                <img src="img\carousel\car1.png" draggable="false"/>
             </div>
             <div class="slide-box">
                 <img src="img\carousel\car2.png"/>
@@ -97,6 +103,30 @@
     <div style="height: 1000px;">
     </div>
     
+    <script>
+        // 마우스를 딱 찍었을 때 발생하는 이벤트
+            // 1. mousedown(어떤 요소에 마우스 버튼을 눌렀을 때)
+            // 2. mouseup(어떤 요소에 마우스 버튼을 뗐을 때)
+            // 3. mousemove(어떤 요소위에서 마우스 이동할 때)
+        
+        // [기능1] 내가 드래그한 거리만큼 박스도 왼쪽으로 움직이기
+        let startX = 0; // 시작 좌표
+
+        document.getElementsByClassName('slide-box')[0].addEventListener('mousedown', function(e) {
+            startX = e.clientX;
+        });
+        document.getElementsByClassName('slide-box')[0].addEventListener('mousemove', function(e) {
+            // 얼마나 x축으로 드래그 했는지 알 수 있음
+            let finishX = e.clientX;
+            let moveX = startX - finishX;
+            console.log(moveX);
+
+            document.getElementsByClassName('slide-container')[0].style.transform = 'translateX(-' + moveX + 'px)';
+            
+        });
+
+
+    </script>
     <script>
         let blackBg = document.getElementsByClassName('black-bg')[0];
         blackBg.addEventListener('click', function(e) {
