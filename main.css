@@ -44,7 +44,6 @@
   /* margin-left: -200vw; */
   /* transform: translateX(-100vw); */
   /* margin-left보다 부드러워서 성능상 굳 */
-  transition: all 1s;
 }
 .slide-box {
   width: 100vw;

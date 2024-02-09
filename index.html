@@ -131,7 +131,7 @@
         document.getElementsByClassName('slide-box')[0].addEventListener('mouseup', function(e) {
             눌렀냐 = false;
 
-            if(moveX >= 300) {
+            if(moveX >= 460) {
                 //2번 사진 보여주셈
                 document.getElementsByClassName('slide-container')[0].style.transition = 'all 0.5s';
                 document.getElementsByClassName('slide-container')[0].style.transform = 'translateX(-100vw)';
@@ -142,6 +142,14 @@
                 document.getElementsByClassName('slide-container')[0].style.transition = 'all 0.5s';
                 document.getElementsByClassName('slide-container')[0].style.transform = 'translateX(0vw)';
             } 
+
+            // 이동 끝나면 마우스가 속도를 잘 못따라오는 걸 막기 위해 transition: none으로 바꿔주기
+            // transition을 계속 넣어두면 이상해지기 때문...
+            // 그러나 위에서 0.5초동안 움직이기 때문에 그 후에 transition을 없애야 제대로 작동됨
+            setTimeout(()=> {
+                // 0.5초후에 제대로 작동됨
+                document.getElementsByClassName('slide-container')[0].style.transition = 'none';
+            }, 500);
         });
 
 
