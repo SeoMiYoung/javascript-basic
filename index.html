@@ -111,18 +111,23 @@
         
         // [기능1] 내가 드래그한 거리만큼 박스도 왼쪽으로 움직이기
         let startX = 0; // 시작 좌표
+        let 눌렀냐 = false;
 
         document.getElementsByClassName('slide-box')[0].addEventListener('mousedown', function(e) {
             startX = e.clientX;
+            눌렀냐 = true;
         });
         document.getElementsByClassName('slide-box')[0].addEventListener('mousemove', function(e) {
-            // 얼마나 x축으로 드래그 했는지 알 수 있음
-            let finishX = e.clientX;
-            let moveX = startX - finishX;
-            console.log(moveX);
-
-            document.getElementsByClassName('slide-container')[0].style.transform = 'translateX(-' + moveX + 'px)';
-            
+            if(눌렀냐) {
+                // 얼마나 x축으로 드래그 했는지 알 수 있음
+                let finishX = e.clientX;
+                let moveX = startX - finishX;
+                // console.log(moveX);
+                document.getElementsByClassName('slide-container')[0].style.transform = 'translateX(-' + moveX + 'px)';
+            }
+        });
+        document.getElementsByClassName('slide-box')[0].addEventListener('mouseup', function(e) {
+            눌렀냐 = false;
         });
 
 
