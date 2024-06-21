@@ -2,7 +2,6 @@
 자바스크립트 공부 
 > [자바스크립트 info](https://ko.javascript.info/)<br/>
 > [코딩애플 자바스크립트 기초 강의](https://codingapple.com/course/javascript-jquery-ui/)<br/>
-> [코딩애플 자바스크립트 ES6 강의](https://codingapple.com/course/javascript-es6/)
 
 ## 🗓️ 공부 기간
 개념) 2024.01.25 ~<br/>
